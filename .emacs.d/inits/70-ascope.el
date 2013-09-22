@@ -1,0 +1,17 @@
+(require 'ascope)
+
+(global-set-key (kbd "C-c s I") 'ascope-init)
+(global-set-key (kbd "C-c s s") 'ascope-find-this-symbol)
+(global-set-key (kbd "C-c s d") 'ascope-find-global-definition)
+(global-set-key (kbd "C-c s g") 'ascope-find-global-definition)
+(global-set-key (kbd "C-c s t") 'ascope-find-this-text-string)
+(global-set-key (kbd "C-c s c") 'ascope-find-functions-calling-this-function)
+(global-set-key (kbd "C-c s C") 'ascope-find-called-functions)
+(global-set-key (kbd "C-c s i") 'ascope-find-files-including-file)
+(global-set-key (kbd "C-c s a") 'ascope-all-symbol-assignments)
+(global-set-key (kbd "C-c s o") 'ascope-clear-overlay-arrow)
+(global-set-key (kbd "C-c s p") 'ascope-pop-mark)
+
+(setq pwd (getenv "PWD"))
+(cond ((file-exists-p (expand-file-name "cscope.out" pwd))
+  (ascope-init (concat pwd "/")))) 
