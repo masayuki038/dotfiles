@@ -5,3 +5,4 @@ dotfiles
    - init-loader
    - ag
    - wgrep-ag
+- install ag
