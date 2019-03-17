@@ -8,7 +8,10 @@ Plug 'Shougo/unite.vim'
 
 call plug#end()
 
+" Encoding
+set encoding=utf-8
 
+" Indent
 set shiftwidth=2
 set expandtab
 set tabstop=2
