@@ -10,6 +10,12 @@ call plug#end()
 
 " Encoding
 set encoding=utf-8
+set statusline+=[%{has('multi_byte')&&\&fileencoding!=''?&fileencoding:&encoding}]
+" File Format
+set statusline+=[%{&fileformat}]
+
+" File Type
+set statusline+=%y
 
 " Indent
 set shiftwidth=2
