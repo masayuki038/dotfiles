@@ -5,6 +5,9 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'othree/html5.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'Shougo/unite.vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'thinca/vim-quickrun'
+Plug 'kevinw/pyflakes-vim'
 
 call plug#end()
 
@@ -33,3 +36,15 @@ noremap <C-N> :Unite -buffer-name=file file<CR>
 
 " vim-js-indent
 let g:js_indent_typescript = 1
+
+" Python
+autocmd BufNewFile,BufRead *.py nnoremap <C-e> :!python %
+
+nnoremap <F11> :QuickRun<CR>
+
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
+autocmd FileType python setlocal completeopt-=preview
+
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
