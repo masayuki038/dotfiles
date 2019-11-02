@@ -8,6 +8,7 @@ Plug 'Shougo/unite.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'thinca/vim-quickrun'
 Plug 'kevinw/pyflakes-vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
